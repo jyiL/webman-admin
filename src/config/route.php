@@ -16,5 +16,7 @@ Route::group('/api', function () {
     register_route('/user', UserController::class, function ($controller) {
         // 登陸
         Route::post('/login',  [$controller, 'login']);
+        Route::post('/login-info',  [$controller, 'getUserInfo']);
+        Route::post('/logout',  [$controller, 'logout']);
     });
 });
